@@ -55,6 +55,7 @@ dncRouter.get('/dnc', function(req,res){
 
     .post('/dnc', function (req, res) {
     var phoneNumber = req.query.phone_number;
+    var apiKey = req.query.api_key;
      if (apiKey != apiPass)
     {
         res.json({"Inserted":"false", "reason":"Invalid API Key"})
@@ -95,6 +96,7 @@ dncRouter.get('/dnc', function(req,res){
 
     .delete('/dnc', function(req,res){
     var phoneNumber = req.query.phone_number;
+    var apiKey = req.query.api_key;
      if (apiKey != apiPass)
     {
         res.json({"Inserted":"false", "reason":"Invalid API Key"})
